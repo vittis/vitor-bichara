@@ -1,0 +1,826 @@
+body {
+    background-color: #3a0839;   
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 100px;
+}
+* {
+    box-sizing: border-box;
+} 
+
+.container {
+    width: 280px;
+}
+
+
+.labelTec{
+     font-size: 0.8em;
+}
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "header header"
+    "montanhas montanhas"
+    "quemSouEu meuSistema"
+    "meusProjetos faleComigo"
+  ;
+    font-size: 50px;
+}
+
+.header { 
+    grid-area: header; 
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    padding-top: 25px;
+}
+#svg8 {
+    vertical-align: bottom;
+    transform-origin: bottom;
+    height: 460px;
+}
+
+#montanha0 {
+    vertical-align: bottom;
+}
+
+.estrelinhaOut {
+    fill: #ffffff00;
+}
+
+.montanhas { 
+    grid-area: montanhas;
+    text-align: center;
+    vertical-align: bottom;
+    padding-top: 60px;
+}
+.quemSouEu { 
+    grid-area: quemSouEu; 
+    background-color: #eeeaed; 
+    min-height: 800px;
+    margin-left: 35%;
+    border-top-left-radius: 10px;
+}
+#conector {
+    vertical-align: bottom;
+    
+}
+#conector2 {
+    position: absolute;
+    right: -1px;
+}
+
+
+.meuSistema { 
+    grid-area: meuSistema; 
+    background-color: white;
+    margin-right: 35%;
+    min-height: 300px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.meusProjetos { 
+    grid-area: meusProjetos; 
+    min-height: 300px;
+    background-color: white;
+    margin-left: 35%;
+    border-bottom-left-radius: 10px;
+    position: relative;
+
+}
+
+.faleComigo { 
+    grid-area: faleComigo; 
+    background-color: #eeeaed;
+    margin-right: 35%;
+    min-height: 300px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.barraBoa {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #eeeaed 50%, #fff 50%);
+    box-shadow: 0px 5px 0px rgb(83, 33, 78);
+    border-radius: 5px;
+    height: 20px;
+}
+
+
+
+.estrelinha {
+    -webkit-transition: transfrom 1s; /* For Safari 3.1 to 6.0 */
+    transition: fill 0.1s linear;
+}
+.estrelinha:hover {
+    fill: yellow;
+}
+p {
+    text-indent: 3em;
+}
+.label {
+    font-size: 0.8em; 
+    padding-top: 0.52em;
+    color: #3a0839;
+    font-weight: 400;
+    text-align: center;
+}
+
+.content {
+    color: #3a0839;
+    padding-top: 35px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: justify;
+}
+
+a {
+    color: rgb(25, 121, 73);
+}
+
+
+bold {
+    font-weight: bold;
+}
+.sexy_line{ 
+    display:block;
+    border:none;
+    color:white;
+    height:1px;
+    background:black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 300, from(#3a0839), to(#fff));
+}
+
+@media screen and (min-width:320px) {
+    /* body {
+        background-color: #3a0839;
+    } */
+    p {
+        text-indent: 1em;
+    }
+    #svg1 {
+        height: 38px;
+    }
+    .conectorBom {
+        display: none;
+    }
+    .quemSouEu {
+        margin-left:3%;
+        margin-right:3%;
+        border-top-right-radius: 10px;
+    }
+    .meusProjetos {
+        margin-left:3%;
+        margin-right:3%;
+        border-bottom-left-radius: 0px;
+    }
+    .meuSistema {
+        margin-left:3%;
+        margin-right:3%;
+        border-top-right-radius: 0px;
+    }
+    
+    .faleComigo { 
+        margin-left:3%;
+        margin-right:3%;
+        border-bottom-left-radius: 10px;
+    }
+    #svg8 {
+        height: 160px;
+    }
+   
+    #svg1 {
+        height: 52px;
+    }
+    .mainGrid {
+        font-size: 40px;
+         grid-template-areas: 
+            "header header"
+            "montanhas montanhas "
+            "quemSouEu quemSouEu"
+            "meuSistema meuSistema"
+            "meusProjetos meusProjetos"
+            "faleComigo faleComigo"
+        ; 
+    }
+
+    .barraBoa {
+        display: block;
+        width: 94%;
+    }
+
+    
+}
+@media screen and (min-width:480px) {
+    /* body {
+        background-color: red;
+    } */
+    p {
+        text-indent: 1em;
+    }
+    #svg1 {
+        height: 38px;
+    }
+    .conectorBom {
+        display: none;
+    }
+    .quemSouEu {
+        margin-left:3%;
+        margin-right:3%;
+        border-top-right-radius: 10px;
+
+    }
+    .meusProjetos {
+        margin-left:3%;
+        margin-right:3%;
+    }
+    .meuSistema { 
+        margin-left:3%;
+        margin-right:3%;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .faleComigo { 
+        margin-left:3%;
+        margin-right:3%;
+        border-bottom-left-radius: 10px;
+    }
+    #svg8 {
+        height: 220px;
+    }
+    .mainGrid {
+        font-size: 50px;
+        grid-template-areas: 
+            "header header"
+            "montanhas montanhas "
+            "quemSouEu quemSouEu"
+            "meuSistema meuSistema"
+            "meusProjetos meusProjetos"
+            "faleComigo faleComigo"
+        ; 
+    }
+    .barraBoa {
+        display: block;
+        width: 94%;
+    }
+    
+}
+@media screen and (min-width:600px) {
+    /* body {
+        background-color: green;
+    } */
+    p {
+        text-indent: 1em;
+    }
+    #svg1 {
+        height: 42px;
+    }
+    .conectorBom {
+        display: none;
+    }
+    .quemSouEu {
+        margin-left:5%;
+        margin-right:5%;
+        border-top-right-radius: 10px;
+    }
+    .meusProjetos {
+        margin-left:5%;
+        margin-right:5%;
+        border-bottom-left-radius: 0px;
+    }
+    .meuSistema {
+        margin-left:5%;
+        margin-right:5%;
+        border-top-right-radius: 0px;
+
+    }
+    .faleComigo { 
+        margin-left:5%;
+        margin-right:5%;
+        border-bottom-left-radius: 10px;
+    }
+    #svg8 {
+        height: 270px;
+    }
+    .mainGrid {
+        font-size: 50px;
+        grid-template-areas: 
+            "header header"
+            "montanhas montanhas "
+            "quemSouEu quemSouEu"
+            "meuSistema meuSistema"
+            "meusProjetos meusProjetos"
+            "faleComigo faleComigo"
+        ; 
+    }
+    .barraBoa {
+        display: block;
+        width: 90%;
+    }
+}
+@media screen and (min-width:801px) {
+    /* body {
+        background-color: yellow;
+    } */
+    p {
+        text-indent: 3em;
+    }
+    #svg1 {
+        height: 52px;
+    }
+    .conectorBom {
+        display: block;
+    }
+    .quemSouEu {
+        margin-left:8%;
+        margin-right:0%;
+        border-top-right-radius: 0px;
+    }
+    .meusProjetos {
+        margin-left:8%;
+        margin-right:0%;  
+        border-bottom-left-radius: 10px;  
+    }
+    .meuSistema {
+        margin-left:0%;
+        margin-right:8%;
+        border-top-right-radius: 10px;
+    }
+    .faleComigo { 
+        margin-left:0%;
+        margin-right:8%;
+        border-bottom-left-radius: 0px;
+    }
+    #svg8 {
+        height: 360px;
+    }
+    .mainGrid {
+        font-size: 50px;
+        grid-template-areas: 
+            "header header"
+            "montanhas montanhas "
+            "quemSouEu meuSistema"
+            "meusProjetos faleComigo"
+        ; 
+    }
+    .barraBoa {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    /* body {
+        background-color: pink;
+    } */
+    p {
+        text-indent: 3em;
+    }
+    #svg1 {
+        height: 52px;
+    }
+    .conectorBom {
+        display: block;
+    }
+    .quemSouEu {
+        margin-left:14%;
+        margin-right:0%;
+        border-top-right-radius: 0px;
+    }
+    .meusProjetos {
+        margin-left:14%;
+        margin-right:0%;
+        border-bottom-left-radius: 10px;
+    }
+    .meuSistema {
+        margin-left:0%;
+        margin-right:14%;
+        border-top-right-radius: 10px;
+    }
+    .faleComigo { 
+        margin-left:0%;
+        margin-right:14%;
+        border-bottom-left-radius: 0px;
+    }
+    #svg8 {
+        height: 400px;
+    }
+    .mainGrid {
+        font-size: 50px;
+        grid-template-areas: 
+        "header header"
+        "montanhas montanhas "
+        "quemSouEu meuSistema"
+        "meusProjetos faleComigo"
+        ; 
+    }
+    .barraBoa {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1281px) {
+    /* body {
+        background-color: orange;
+    } */
+    p {
+        text-indent: 3em;
+    }
+    #svg1 {
+        height: 52px;
+    }
+    .conectorBom {
+        display: block;
+    }
+    .quemSouEu {
+        margin-left:21%;
+        border-top-right-radius: 0px;
+    }
+    .meusProjetos {
+        margin-left:21%;
+        border-bottom-left-radius: 10px;
+    }
+    .meuSistema {
+        margin-right:21%;
+        border-top-right-radius: 10px;
+    }
+    .faleComigo { 
+        margin-right:21%;
+        border-bottom-left-radius: 0px;
+    }
+    #svg8 {
+        height: 425px;
+    }
+    .mainGrid {
+        font-size: 50px;
+        grid-template-areas: 
+        "header header"
+        "montanhas montanhas "
+        "quemSouEu meuSistema"
+        "meusProjetos faleComigo"
+        ; 
+    }
+    .barraBoa {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1499px) {
+    /* body {
+        background-color: teal;
+    } */
+    p {
+        text-indent: 3em;
+    }
+    #svg1 {
+        height: 52px;
+    }
+    .conectorBom {
+        display: block;
+    }
+    .quemSouEu {
+        margin-left:27%;
+        border-top-right-radius: 0px;
+    }
+    .meusProjetos {
+        margin-left:27%;
+        border-bottom-left-radius: 10px;
+    }
+    .meuSistema {
+        margin-right:27%;
+        border-top-right-radius: 10px;
+    }
+    .faleComigo { 
+        margin-right:27%;
+        border-bottom-left-radius: 0px;
+    }
+     #svg8 {
+        height: 460px;
+    }
+    .mainGrid {
+        font-size: 50px;
+        grid-template-areas: 
+            "header header"
+            "montanhas montanhas "
+            "quemSouEu meuSistema"
+            "meusProjetos faleComigo"
+            ; 
+    }
+    .barraBoa {
+        display: none;
+    }
+}
+
+
+
+
+@media screen and (min-width:1800px) {
+    /* body {
+        background-color: black;
+    } */
+    p {
+        text-indent: 3em;
+    }
+    #svg1 {
+        height: 52px;
+    }
+    .conectorBom {
+        display: block;
+    }
+    .quemSouEu {
+        margin-left:35%;
+        border-top-right-radius: 0px;
+    }
+    .meusProjetos {
+        margin-left:35%;
+        border-bottom-left-radius: 10px;
+    }
+    .meuSistema {
+        margin-right:35%;
+        border-top-right-radius: 10px;
+    }
+    .faleComigo { 
+        margin-right:35%;
+        border-bottom-left-radius: 0px;
+    }
+     #svg8 {
+        height: 460px;
+    }
+    .mainGrid {
+        font-size: 50px;
+        grid-template-areas: 
+            "header header"
+            "montanhas montanhas "
+            "quemSouEu meuSistema"
+            "meusProjetos faleComigo"
+            ; 
+    }
+    .barraBoa {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+.fade-out {
+	opacity:1;  /* make things invisible upon start */
+	-webkit-animation:fadeOut ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeOut ease-in 1;
+	animation:fadeOut ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:2s;
+	-moz-animation-duration:2s;
+	animation-duration:2s;
+} 
+
+.fade-out {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:2s;
+	-moz-animation-duration:2s;
+	animation-duration:2s;
+} 
+
+.fade-in.one {
+-webkit-animation-delay: 1s;
+-moz-animation-delay: 1s;
+animation-delay: 1s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 2s;
+-moz-animation-delay: 2s;
+animation-delay: 2s;
+}
+ 
+.fade-in.three {
+-webkit-animation-delay: 3s;
+-moz-animation-delay: 3s;
+animation-delay: 3s;
+}
+ 
+.fade-in.four {
+-webkit-animation-delay: 4s;
+-moz-animation-delay: 4s;
+animation-delay: 4s;
+}
+
+
+
+
+
+
+.container {
+    transform: scale(0.7);
+  margin: 0 auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.machine {
+    width: 60vmin;
+    fill: #3a0839; 
+    -webkit-transition: transform 0.5s ease; /* For Safari 3.1 to 6.0 */
+    transition: transform 0.5s ease;
+    cursor: crosshair;
+}
+
+/* .machine:hover {
+    transform: scale(1.05);
+} */
+.dot {
+  border: 2px solid #3a0839;
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.dot.is-active {
+      background-color: #3a0839;
+}
+
+
+
+.small-shadow, .medium-shadow, .large-shadow {
+  fill: rgba(0, 0, 0, 0.05); }
+
+.small {
+  -webkit-animation: counter-rotation 2.5s infinite linear forwards;
+	   -moz-animation: counter-rotation 2.5s infinite linear forwards;
+	     -o-animation: counter-rotation 2.5s infinite linear forwards;
+	        animation: counter-rotation 2.5s infinite linear forwards;
+  -webkit-transform-origin: 100.136px 225.345px;
+      -ms-transform-origin: 100.136px 225.345px;
+          transform-origin: 100.136px 225.345px; 
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        }
+
+.small-shadow {
+  -webkit-animation: counter-rotation 2.5s infinite linear forwards;
+	   -moz-animation: counter-rotation 2.5s infinite linear forwards;
+	     -o-animation: counter-rotation 2.5s infinite linear forwards;
+	        animation: counter-rotation 2.5s infinite linear forwards;
+  -webkit-transform-origin: 110.136px 235.345px;
+      -ms-transform-origin: 110.136px 235.345px;
+          transform-origin: 110.136px 235.345px; 
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        }
+
+.medium {
+  -webkit-animation: rotation 3.75s infinite linear forwards;
+	   -moz-animation: rotation 3.75s infinite linear forwards;
+	     -o-animation: rotation 3.75s infinite linear forwards;
+	        animation: rotation 3.75s infinite linear forwards;
+  -webkit-transform-origin: 254.675px 379.447px;
+      -ms-transform-origin: 254.675px 379.447px;
+          transform-origin: 254.675px 379.447px; 
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        }
+
+.medium-shadow {
+  -webkit-animation: rotation 3.75s infinite linear forwards;
+	   -moz-animation: rotation 3.75s infinite linear forwards;
+	     -o-animation: rotation 3.75s infinite linear forwards;
+	        animation: rotation 3.75s infinite linear forwards;
+  -webkit-transform-origin: 264.675px 389.447px;
+      -ms-transform-origin: 264.675px 389.447px;
+          transform-origin: 264.675px 389.447px; 
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        }
+
+.large {
+  -webkit-animation: counter-rotation 5s infinite linear forwards;
+     -moz-animation: counter-rotation 5s infinite linear forwards;
+	     -o-animation: counter-rotation 5s infinite linear forwards;
+        	animation: counter-rotation 5s infinite linear forwards;
+  -webkit-transform-origin: 461.37px 173.694px;
+      -ms-transform-origin: 461.37px 173.694px;
+          transform-origin: 461.37px 173.694px; 
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        }
+
+.large-shadow {  
+  -webkit-animation: counter-rotation 5s infinite linear forwards;
+	   -moz-animation: counter-rotation 5s infinite linear forwards;
+	     -o-animation: counter-rotation 5s infinite linear forwards;
+	        animation: counter-rotation 5s infinite linear forwards;
+  -webkit-transform-origin: 471.37px 183.694px;
+      -ms-transform-origin: 471.37px 183.694px;
+          transform-origin: 471.37px 183.694px; 
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        }
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes rotation {
+    from {-moz-transform: rotate(0deg);}
+    to   {-moz-transform: rotate(359deg);}
+}
+@-o-keyframes rotation {
+    from {-o-transform: rotate(0deg);}
+    to   {-o-transform: rotate(359deg);}
+}
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(359deg);}
+}
+
+@-webkit-keyframes counter-rotation {
+    from {-webkit-transform: rotate(359deg);}
+    to   {-webkit-transform: rotate(0deg);}
+}
+@-moz-keyframes counter-rotation {
+    from {-moz-transform: rotate(359deg);}
+    to   {-moz-transform: rotate(0deg);}
+}
+@-o-keyframes counter-rotation {
+    from {-o-transform: rotate(359deg);}
+    to   {-o-transform: rotate(0deg);}
+}
+@keyframes counter-rotation {
+    from {transform: rotate(359deg);}
+    to   {transform: rotate(0deg);}
+}
+.arrow {
+    border-right:10px solid #3a0839;
+    border-bottom:10px solid #3a0839;
+    width:30px;
+    height:30px;
+    transform: rotate(-45deg);
+}
+.controls > img{
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.5s;
+    padding: 10px;
+}
+.controls > img:hover{
+    background-color: #eeeaed;
+}
+
+
+
+#canvasPixi{
+    height: 200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
