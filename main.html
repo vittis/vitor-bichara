@@ -24,7 +24,7 @@
     <div class="mainGrid">
        
         <div class="header" style="padding-top: 0.7em;">
-
+            <a href="./main.html" class="headerLink">
             <div id="lineDrawing">
             <svg id="svg1" width="86%" height="13.785mm" version="1.1" viewBox="0 0 141.33709 13.785243" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="0.7" class="lines">                    <path id="path5175" d="m0.28846 0.43548c1.6463 4.3216 3.2926 8.6432 4.939 12.965m4.939-12.965c-1.6463 4.3216-3.2926 8.6432-4.939 12.965"
@@ -49,11 +49,10 @@
                     />
                 </g>
             </svg>
-
-
-
-
+            </a>
             </div>
+
+            <!-- <div style="font-size: 1.5em;">VITOR BICHARA</div> -->
 
             <div class="fade-in three" style="font-weight: 100; padding-top: 0.6em;font-size: 0.5em;">designer - desenvolvedor</div>
         </div>
@@ -211,27 +210,30 @@
             <div class="label" style="width: 90%;margin: 0 auto;">
                 <h1>quem sou eu</h1>
             </div>
-            <div id="contentID" class="content" style="padding-bottom: 40px;">
+            <div class="content" style="padding-bottom: 40px;">
                 
                 <span style="margin: 0px 10px 15px 10px" class="sexy_line"></span>
                 <div style="text-align: center;">Nunca me considerei uma pessoa criativa.</div>
                 <span style="margin: 15px 10px 20px 10px" class="sexy_line"></span>
                 <p>De fato, sempre pensei ter mais aptidão à <bold>lógica</bold> que à <bold>emoção</bold>. Sempre estive mais confortável ao redor de números
-                e padrões do que traços e rabiscos.</p>
-                <p>No decorrer dos anos, no entanto, percebi que estava enganado. E que a criatividade se manifesta através de um espectro e, portanto, se revela de várias formas.</p>
+                e padrões do que de traços e rabiscos.</p>
+                <p>No decorrer dos anos, no entanto, percebi que estava enganado. E que a criatividade se manifesta por meio de um espectro e, portanto, se revela de várias formas.</p>
                 <p>Percebi, enfim, que podia criar <bold>arte</bold> com lógica, números e padrões:</p>
 
               
-                <div id="containerFibo" style="padding: 30px 0px 40px 0px; cursor: crosshair;">
+                <div onmouseout="mouseOutFibo()" id="containerFibo" style="padding: 30px 0px 20px 0px; cursor: crosshair;">
                     <canvas id="canvasPixi"></canvas>
+                    <div style="text-align: center; font-size: 0.9em; margin-top: 10px;margin-bottom: 20px">
+                        Esfera de Fibonacci
+                    </div>
+                    
+                    <!-- <input type="range" id="speedRange" min="0.1" max="180" step="1" value="100"  style="float: right;"> -->
+                    <input type="range" id="myRange" min="50" max="1000" step="0.5" style="width: 150px;margin: 0 auto;display: block;">
 
-
-
-                    <div style="text-align: center; font-size: 0.9em; margin-top: 15px;"><i>Esfera de Fibonacci</i></div>
                 </div>
 
-                <p>Foi essa mentalidade que acendeu meu fascínio pelo <bold>design</bold>, que aliada à minha habilidade de desenvolvimento, venho
-                criando <bold>jogos</bold> e <bold>soluções web</bold>.</p>
+                <p>Foi essa mentalidade que acendeu meu fascínio pelo <bold>design</bold> que, aliado à minha habilidade de <bold>desenvolvimento</bold>, vêm me inspirando na criação de
+                 <bold>jogos</bold> e <bold>soluções web</bold>.</p>
             </div>
                 
         </div>
@@ -246,7 +248,7 @@
             <div id="contentID" class="content" style="padding-bottom: 40px;">
 
                 <p>Como cientista da computação, uma das minhas maiores preocupações é ter total controle sobre a aplicação que estou codificando.</p>
-                <p>Um exemplo disso é a <a target="_blank" href="https://github.com/vittis/hexsum">game engine</a> que desenvolvi do zero, em C++, utilizando somente uma biblioteca gráfica de baixo nível.</p>
+                <p>Um exemplo disso é a <a class="link" target="_blank" href="https://github.com/vittis/hexsum">game engine</a> que desenvolvi do zero, em C++, utilizando somente uma biblioteca gráfica de baixo nível.</p>
                 
                 <div  class="container">
                     <svg onmouseenter="onMouseGear(this)" onmouseleave="onMouseOutGear(this)" class="machine" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 645 526">
@@ -281,7 +283,7 @@
                 <div style="text-align: center;">Na web, a minha mentalidade continuou a mesma.</div>
                 <span style="margin: 20px 10px 15px 10px" class="sexy_line"></span>
                 <div style="text-align: center;">Meu objetivo é criar aplicações <bold>robustas e flexíveis</bold>, que proporcionem ao usuário uma <bold>experiência intuitiva, clara e satisfatória</bold>,
-                através de um <bold>design inteligente e responsivo</bold>.</div>
+                por meio de um <bold>design inteligente e responsivo</bold>.</div>
                 <span style="margin: 15px 10px 20px 10px" class="sexy_line"></span>
                 <div style="text-align: center;">Já trabalhei com as seguintes tecnologias:</div>
 
@@ -375,6 +377,67 @@
             <div class="label">
                 meus projetos
             </div>
+            <div class="content" style="padding-bottom: 30px;">
+
+                <div>
+                    <div class="controls2">
+                        <img class="leftSeta"  src="img/logos/angle-left.png" onclick="clickLeft2()" alt="">
+                        <img class="rightSeta" src="img/logos/angle-right.png" onclick="clickRight2()" alt="">
+                    </div>
+                    <div id="containerSlider2" style="width: 90%; margin: 0 auto; padding-top: 0px;">
+                        <div class="my-slider2" style="text-align: center;">
+                            <div>
+                                <img class="imgNice" src="img/vortex.jpg">
+                                <div class="labelProjeto"><bold>Vortex, A Tormenta de Morpheus</bold></div>
+                                <span style="margin: 0px 0px 10px 0px" class="sexy_line"></span>
+
+                                <p style="text-align: justify;font-size: 0.9em;">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse.</p>
+                            </div>
+                            <div>
+                                <img class="imgNice" src="img/vortex.jpg">
+                                <div class="labelProjeto">
+                                    <bold>Vortex, A Tormenta de Morpheus</bold>
+                                </div>
+                                <span style="margin: 0px 10px 15px 10px" class="sexy_line"></span>
+                                <p style="text-align: justify;font-size: 0.9em;">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.
+                                    Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis
+                                    soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated
+                                    corpse.</p>
+                            </div>
+                            <div>
+                                <img src="img/logos/lua.png">
+                                <div class="labelProjeto">Lua</div>
+                            </div>
+                            <div>
+                                <img src="img/logos/golang.png">
+                                <div class="labelProjeto">Golang</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dotsBom2" style="width: 100%; margin: 0 auto; text-align: center;margin-top: 25px;">
+                        <span class="dot is-active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+
+                
+
+
+
+
+
+
+
+
+
+            </div>
+
+
         </div>
 
         <div class="faleComigo">

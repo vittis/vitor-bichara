@@ -10,7 +10,9 @@ body {
 .container {
     width: 280px;
 }
-
+.labelProjeto {
+    margin-bottom: 10px;
+}
 
 .labelTec{
      font-size: 0.8em;
@@ -82,7 +84,7 @@ body {
 
 .meusProjetos { 
     grid-area: meusProjetos; 
-    min-height: 300px;
+    min-height: 600px;
     background-color: white;
     margin-left: 35%;
     border-bottom-left-radius: 10px;
@@ -132,7 +134,7 @@ p {
 
 .content {
     color: #3a0839;
-    padding-top: 35px;
+    padding-top: 30px;
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -141,10 +143,12 @@ p {
     text-align: justify;
 }
 
-a {
+.headerLink {
+    color: white;
+}
+.link {
     color: rgb(25, 121, 73);
 }
-
 
 bold {
     font-weight: bold;
@@ -155,18 +159,18 @@ bold {
     color:white;
     height:1px;
     background:black;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 300, from(#3a0839), to(#fff));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 300, from(#3a0839), to(transparent));
 }
 
 @media screen and (min-width:320px) {
-    /* body {
-        background-color: #3a0839;
-    } */
+    /*  body {
+        background-color: red;
+    }  */
     p {
         text-indent: 1em;
     }
     #svg1 {
-        height: 38px;
+        height: 32px;
     }
     .conectorBom {
         display: none;
@@ -193,12 +197,10 @@ bold {
         border-bottom-left-radius: 10px;
     }
     #svg8 {
-        height: 160px;
+        height: 141px;
     }
    
-    #svg1 {
-        height: 52px;
-    }
+   
     .mainGrid {
         font-size: 40px;
          grid-template-areas: 
@@ -219,9 +221,9 @@ bold {
     
 }
 @media screen and (min-width:480px) {
-    /* body {
-        background-color: red;
-    } */
+     /* body {
+        background-color: green;
+    }  */
     p {
         text-indent: 1em;
     }
@@ -469,6 +471,7 @@ bold {
     .barraBoa {
         display: none;
     }
+    
 }
 
 @media screen and (min-width:1499px) {
@@ -816,11 +819,66 @@ animation-delay: 4s;
 
 
 
+.leftSeta {
+    position: absolute;
+    top: 80px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s; 
+    transition: background-color 0.5s;
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    z-index: 1;
+}
+.rightSeta {
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s; 
+    transition: background-color 0.5s;
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    z-index: 1;
+}
+.rightSeta:hover {
+    background-color: #eeeaed;
+}
+.leftSeta:hover {
+    background-color: #eeeaed;
+}
+.controls2 {
+    position: relative;
+}
+
+/* .controls2 > img{
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s; 
+    transition: background-color 0.5s;
+    padding: 10px;
+}
+.controls2 > img:hover{
+    background-color: #eeeaed;
+} */
+
+
 #canvasPixi{
     height: 200px;
     margin: 0 auto;
-    width: 100%;
+    width: 200px;
+    display: block;
 }
 
 
+.imgNice {
+/*     -webkit-transition: width .5s; 
+    transition: width .5s; */
+    width: 80%;
+}
+
+/* .imgNice:hover {
+        width: 83%;
+} */
 

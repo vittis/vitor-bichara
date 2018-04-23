@@ -96,6 +96,8 @@ window.addEventListener('resize', function (event) {
         dots[4].style.display = "inline-block";
         dots[5].style.display = "inline-block";
     }
+
+    //canvasPixi.style.width = '100%';
 });
 
 var dots;
@@ -212,7 +214,16 @@ function giraRoda() {
 var rodaInterval;
 var containerSlider;
 var slider;
+var slider2;
+
+var dbg;
+var containerFibo;
 function init() {
+    containerFibo = document.getElementById('containerFibo');
+    containerFibo.addEventListener('mousemove', onMousemove, false);
+
+     dbg = document.getElementById('dbg');  //just for debug div instead of console
+
     var x = document.getElementsByTagName("BODY")[0].addEventListener("mousemove", function(event){
         mouseMove(event);
     }); 
@@ -253,12 +264,8 @@ function init() {
         controlsContainer: ".controls",
         slideBy: 2,
         nav: false,
-        //navContainer: ".dotsBom",
-        /* fixedWidth: 60, */
-        /* autoplay: true,
-        autoplayButtonOutput: false,
-        autoplayHoverPause: true, */
         mouseDrag: false,
+        arrowKeys: false,
         touch: false,
         speed: 750,
         items: 2,
@@ -291,6 +298,24 @@ function init() {
     }
 
 
+
+
+    slider2 = tns({
+        container: '.my-slider2',
+        slideBy: 1,
+        controlsContainer: ".controls2",
+        nav: false,
+        mouseDrag: false,
+        arrowKeys: false,
+        touch: false,
+        speed: 300,
+        items: 1,
+        loop: false,
+    });
+
+
+
+
     estrelas = document.getElementsByClassName("estrelinhaOut");
 
     //svg8.addEventListener("touchmove", handleMove, false);
@@ -317,105 +342,41 @@ function init() {
          easing: 'easeInOutQuad',
         duration: 2500
     }); 
+    cantSlider = document.getElementById("myRange");
 
-
-    var loop = true;
-    var easing = 'linear';
-    var direction = 'alternate';
-
-    anime({
-        targets: '.ball',
-        translateX: 0,
-        translateY: 0,
-        easing,
-        loop,
-        direction
-    })
-    var ballTimeline = anime.timeline({
-        loop,
-        direction,
-        duration: 1500
-    })
-    var bar2Timeline = anime.timeline({
-        loop,
-        direction,
-        translateY: 0
-    })
-    var bar1Timeline = anime.timeline({
-        loop,
-        direction
-    })
-    ballTimeline
-        .add({
-            targets: '.ball',
-            translateY: 0,
-            translateX: 0,
-            easing
-        }).add({
-            targets: '.ball',
-            translateY: 0,
-            translateX: 0,
-            easing
-        }).add({
-            targets: '.ball',
-            translateY: 0,
-            translateX: 0,
-            easing
-        })
-
-    bar2Timeline
-        .add({
-            targets: '.bar2',
-            translateY: 150,
-            easing,
-            background: '#573796'
-        }).add({
-            targets: '.bar2',
-            translateY: 50,
-            easing,
-            background: '#FB89FB'
-        }).add({
-            targets: '.bar2',
-            translateY: 50,
-            easing,
-            background: '#FBF38C'
-        })
-
-    bar1Timeline
-        .add({
-            targets: '.bar1',
-            translateY: 0,
-            easing: 'easeInOutSine',
-            background: '#18FF92'
-        }).add({
-            targets: '.bar1',
-            translateY: 0,
-            easing: 'linear',
-            background: '#5A87FF'
-        }).add({
-            targets: '.bar1',
-            translateY: 0,
-            easing: 'linear',
-            background: '#FF1461'
-        })
-
-    var canvasPixi = document.getElementById("canvasPixi");
-    var app = new PIXI.Application(canvasPixi.clientWidth, canvasPixi.clientHeight, {transparent:true, antialias: false, view: canvasPixi});
-    cant = 250;
-
-    offset = 2 / cant;
-    increment = Math.PI * (3 - Math.sqrt(5));
-    var i; 
+    canvasPixi = document.getElementById("canvasPixi");
+    var app = new PIXI.Application(canvasPixi.clientWidth, canvasPixi.clientHeight, {
+        transparent:true, antialias: true, view: canvasPixi, 
+        forceCanvas: true, autoResize: true
+    });
+    cant = 300;
+    
     var graphics = new PIXI.Graphics();
 
 
     app.stage.addChild(graphics);
     var angleXiba = 0;
+
+    cantSlider.value = 350;
+
+    var tempoBom = 0;
     app.ticker.add(function (delta) {
+        cant = cantSlider.value;
+
+        offset = 2 / cant;
+        increment = Math.PI * (3 - Math.sqrt(5));
+
+        //angleXiba = Math.sin(app.ticker.lastTime*1.5 / 1000);
         
-        angleXiba += delta/70;
+        angleXiba -= delta*speedX * 0.001;
+        /* if (angleXiba > 1000)
+            angleXiba=0; */
         graphics.clear();
-        for (i = 0; i < cant; i++) {
+        //console.log(graphics.width);
+        /* if (!isElementInViewport(containerFibo)) {
+            cant = 0;
+        } */
+        for (var i = 0; i < cant; i++) {
             var x, y, z, r, a, opacity;
             
 
@@ -426,16 +387,21 @@ function init() {
             z = Math.sin(a) * r;
 
             opacity = (1 + z) / 1.5;
-
+            opacity = opacity > 1 ? 1 : opacity;
             graphics.beginFill(0x3a0839, opacity);
-            graphics.drawRect((canvasPixi.clientWidth / 2 + x * 85), (100 + y * 85), 5, 5);
-            //graphics.drawCircle((canvasPixi.clientWidth / 2 + x * 85), (100 + y * 85), 2.5);
 
+            //graphics.drawRect((canvasPixi.clientWidth / 2 + x * 92), (100 + y * 92), 2.9, 2.9); 
+            graphics.drawCircle((canvasPixi.clientWidth / 2 + x * 92), (canvasPixi.clientHeight/2 + y * 92), 1.6);
         }
     });
 
 
 }
+var speedX = 5;
+
+var canvasPixi;
+var cantSlider;
+
 var canvas;
 var circle;
 var cant;
@@ -444,16 +410,6 @@ var increment;
 var points = [];
 
 var giraNice=0;
-function testeFrame() {
-    //updatePoints(Math.random()+1*100);  
-    var angle = (giraNice*1) * Math.PI / 180;
-    //console.log(angle);
-    giraNice++;
-    updatePoints(angle);
-    requestAnimationFrame(testeFrame);
-}
-
-
 
 
 
@@ -545,6 +501,69 @@ function frame() {
 
     requestAnimationFrame(frame); // request the next frame
 }
+
+
+
+
+
+
+function onMousemove(e) {
+    var m_posx = 0, m_posy = 0, e_posx = 0, e_posy = 0,
+        obj = this;
+    //get mouse position on document crossbrowser
+    if (!e) { e = window.event; }
+    if (e.pageX || e.pageY) {
+        m_posx = e.pageX;
+        m_posy = e.pageY;
+    } else if (e.clientX || e.clientY) {
+        m_posx = e.clientX + document.body.scrollLeft
+            + document.documentElement.scrollLeft;
+        m_posy = e.clientY + document.body.scrollTop
+            + document.documentElement.scrollTop;
+    }
+    //get parent element position in document
+    if (obj.offsetParent) {
+        do {
+            e_posx += obj.offsetLeft;
+            e_posy += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+    }
+    // mouse position minus elm position is mouseposition relative to element:
+    
+    let f = (m_posx - e_posx) / containerFibo.clientWidth;
+    speedX = lerp(-50,50, f);
+
+}
+
+function mouseOutFibo() {
+    if (speedX > 0)
+        speedX = 5;
+    else {
+        speedX = -5;
+    }
+}
+
+
+function isElementInViewport(el) {
+
+    //special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    );
+}
+
+
+
+
 
 function mouseMove(e) {
     
