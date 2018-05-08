@@ -96,12 +96,13 @@ window.addEventListener('resize', function (event) {
         dots[4].style.display = "inline-block";
         dots[5].style.display = "inline-block";
     }
-
-    //canvasPixi.style.width = '100%';
+    espacoBranco.style.height = slidesProjeto[indiceSlides].clientHeight+"px";
+    
 });
 
 var dots;
-
+var espacoBranco;
+var slidesProjeto;
 function clickLeft() {
     if (podeClicar) {
             
@@ -145,7 +146,7 @@ function clickLeft() {
             }
         }
         podeClicar = false;
-        setTimeout(resetaClique, 750);
+        setTimeout(resetaClique, 450);
     }
 }
 function resetaClique() {
@@ -195,7 +196,7 @@ function clickRight() {
             }
         }
         podeClicar = false;
-        setTimeout(resetaClique, 750);
+        setTimeout(resetaClique, 450);
     }
 }
 function giraRoda() {
@@ -214,11 +215,28 @@ function giraRoda() {
 var rodaInterval;
 var containerSlider;
 var slider;
-var slider2;
 
 var dbg;
 var containerFibo;
+var dots2;
 function init() {
+    slidesProjeto = document.getElementsByClassName("slideProjeto");
+    espacoBranco = document.getElementById("espacoBranco");
+
+    var maiorAltura = -1;
+    for (let i = 0; i < slidesProjeto.length; i++) {
+        if (maiorAltura < parseInt(slidesProjeto[i].clientHeight)) {
+            maiorAltura = parseInt(slidesProjeto[i].clientHeight);
+            
+        }
+        if (i != 0)
+            slidesProjeto[i].style.display = "none";
+    }
+
+    espacoBranco.style.height = maiorAltura + "px";
+
+
+    dots2 = document.getElementsByClassName("dot2");
     containerFibo = document.getElementById('containerFibo');
     containerFibo.addEventListener('mousemove', onMousemove, false);
 
@@ -267,9 +285,10 @@ function init() {
         mouseDrag: false,
         arrowKeys: false,
         touch: false,
-        speed: 750,
+        speed: 450,
         items: 2,
         loop: false,
+        rewind: false,
         responsive: {
             640: {
                 items: 2,
@@ -298,7 +317,7 @@ function init() {
     }
 
 
-
+/* 
 
     slider2 = tns({
         container: '.my-slider2',
@@ -307,12 +326,12 @@ function init() {
         nav: false,
         mouseDrag: false,
         arrowKeys: false,
-        touch: false,
+        touch: true,
         speed: 300,
         items: 1,
-        loop: false,
+        loop: false
     });
-
+ */
 
 
 
@@ -590,5 +609,146 @@ function lerp(a , b, f)
     return (a * (1.0 - f)) + (b * f);
 }
 
+var indiceSlides=0;
+var podePassarSlide = true;
+
+function clickRight2() {
+    if (indiceSlides >= slidesProjeto.length-1 || !podePassarSlide) {
+        return;
+    }
+    var indiceAtual = indiceSlides;
 
 
+    podePassarSlide = false;
+
+    anime({
+        targets: slidesProjeto[indiceAtual],
+        translateX: "-100%",
+        easing: 'easeInOutBack',
+        complete: function (anim) {
+            slidesProjeto[indiceAtual].style.display = "none";
+            podePassarSlide = true;
+
+        }
+    });
+    dots2[indiceAtual].classList.remove("is-active");
+    dots2[indiceAtual + 1].classList.add("is-active");
+
+    slidesProjeto[indiceAtual + 1].style.display = "block";
+    slidesProjeto[indiceAtual + 1].style.transform = "translateX(100%)";
+    //espacoBranco.style.height = slidesProjeto[indiceAtual + 1].clientHeight + "px";
+
+    //espacoBranco.style.height = slidesProjeto[indiceAtual+1].clientHeight + "px";
+
+    anime({
+        targets: slidesProjeto[indiceAtual + 1],
+        translateX: 0,
+        easing: 'easeInOutBack'
+    });
+
+    indiceSlides++;
+}
+function onClickDot(dot) {
+    var indicePrair = parseInt(dot.getAttribute("data-id"));
+    if (slider.getInfo().items == 3) {
+        slider.goTo(indicePrair*3);
+
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("is-active");
+        }
+        dots[indicePrair].classList.add("is-active");
+    }
+    else {
+        slider.goTo(indicePrair * 2);
+
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("is-active");
+        }
+        dots[indicePrair].classList.add("is-active");
+    }
+}
+function onClickDot2(dot) {
+    
+    var indicePrair =  parseInt(dot.getAttribute("data-id"));
+    if (indicePrair == indiceSlides || !podePassarSlide) {
+        return;
+    }
+    var indiceAtual = indiceSlides;
+
+    podePassarSlide = false;
+
+    var translateBom;
+    var translateBom2;
+
+    if (indicePrair > indiceAtual) {
+        translateBom = "-100%";
+        translateBom2 = "100%";
+    }
+    else {
+        translateBom = "100%";
+        translateBom2 = "-100%";
+    }
+    anime({
+        targets: slidesProjeto[indiceAtual],
+        translateX: translateBom,
+        easing: 'easeInOutBack',
+        complete: function (anim) {
+            slidesProjeto[indiceAtual].style.display = "none";
+            podePassarSlide = true;
+        }
+    });
+
+    dots2[indiceAtual].classList.remove("is-active");
+    dots2[indicePrair].classList.add("is-active");
+
+    slidesProjeto[indicePrair].style.display = "block";
+    slidesProjeto[indicePrair].style.transform = "translateX("+translateBom2+")";
+    //espacoBranco.style.height = slidesProjeto[indicePrair].clientHeight + "px";
+
+
+    anime({
+        targets: slidesProjeto[indicePrair],
+        translateX: 0,
+        easing: 'easeInOutBack',
+    });
+
+    indiceSlides = indicePrair;
+
+}
+function clickLeft2() {
+    if (indiceSlides <= 0 || !podePassarSlide) {
+        return;
+    }
+
+    var indiceAtual = indiceSlides;
+    
+    podePassarSlide = false;
+
+    anime({
+        targets: slidesProjeto[indiceAtual],
+        translateX: "100%",
+        easing: 'easeInOutBack',
+        complete: function (anim) {
+            slidesProjeto[indiceAtual].style.display = "none";
+            podePassarSlide = true;
+        }
+    });
+
+    dots2[indiceAtual].classList.remove("is-active");
+    dots2[indiceAtual - 1].classList.add("is-active");
+
+    slidesProjeto[indiceAtual - 1].style.display = "block";
+    slidesProjeto[indiceAtual - 1].style.transform = "translateX(-100%)";
+    //espacoBranco.style.height = slidesProjeto[indiceAtual - 1].clientHeight + "px";
+
+    //espacoBranco.style.height = slidesProjeto[indiceAtual - 1].clientHeight + "px";
+
+    anime({
+        targets: slidesProjeto[indiceAtual - 1],
+        translateX: 0,
+        easing: 'easeInOutBack',
+    });
+
+    indiceSlides--;
+    
+}
