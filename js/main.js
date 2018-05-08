@@ -219,6 +219,13 @@ var slider;
 var dbg;
 var containerFibo;
 var dots2;
+anime({
+    targets: '#lineDrawing .lines path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 1500,
+    delay: function (el, i) { return i * 250 },
+});
 function init() {
     slidesProjeto = document.getElementsByClassName("slideProjeto");
     espacoBranco = document.getElementById("espacoBranco");
@@ -316,42 +323,20 @@ function init() {
         dots[5].style.display = "none";
     }
 
-
-/* 
-
-    slider2 = tns({
-        container: '.my-slider2',
-        slideBy: 1,
-        controlsContainer: ".controls2",
-        nav: false,
-        mouseDrag: false,
-        arrowKeys: false,
-        touch: true,
-        speed: 300,
-        items: 1,
-        loop: false
-    });
- */
-
-
-
     estrelas = document.getElementsByClassName("estrelinhaOut");
 
-    //svg8.addEventListener("touchmove", handleMove, false);
 
     setTimeout(iniciaPiscadaBoa, 7000);
     rodaInterval = setInterval(giraRoda, 9000);
-    //setTimeout(iniciaLoopEstrelas, 6000);
 
 
-    var lineDrawing = anime({
+    /* anime({
         targets: '#lineDrawing .lines path',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
         duration: 1500,
         delay: function (el, i) { return i * 250 },
-        
-    });
+    }); */
 
      anime({
         targets: lua,
