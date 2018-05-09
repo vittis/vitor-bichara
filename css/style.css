@@ -935,7 +935,14 @@ animation-delay: 4s;
     vertical-align: middle;
     
     cursor: pointer;
+
+    transition: all .2s ease-in-out;
 }
+
+.socialImg:hover {
+    transform: scale(1.1);
+}
+
 
 .dot {
   border: 2px solid #3a0839;
