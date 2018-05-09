@@ -169,6 +169,14 @@ bold {
     /*   body {
         background-color: red;
     }   */
+    .socialImg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
     p {
         text-indent: 1em;
     }
@@ -187,23 +195,47 @@ bold {
     .quemSouEu {
         margin-left:3%;
         margin-right:3%;
+
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-bottom: 30px;
+
         border-top-right-radius: 10px;
+
     }
     .meusProjetos {
         margin-left:3%;
         margin-right:3%;
-        border-bottom-left-radius: 0px;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 30px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     .meuSistema {
         margin-left:3%;
         margin-right:3%;
-        border-top-right-radius: 0px;
+
+        
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     
     .faleComigo { 
         margin-left:3%;
         margin-right:3%;
         border-bottom-left-radius: 10px;
+
+        margin-top: 30px;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
     #svg8 {
         height: 141px;
@@ -233,6 +265,14 @@ bold {
      /*  body {
         background-color: pink;
     }   */
+    .socialImg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
     p {
         text-indent: 1em;
     }
@@ -253,21 +293,41 @@ bold {
         margin-right:3%;
         border-top-right-radius: 10px;
 
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-bottom: 30px;
     }
     .meusProjetos {
         margin-left:3%;
         margin-right:3%;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 30px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     .meuSistema { 
         margin-left:3%;
         margin-right:3%;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        
     }
     .faleComigo { 
         margin-left:3%;
         margin-right:3%;
         border-bottom-left-radius: 10px;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        margin-top: 30px;
     }
     #svg8 {
         height: 220px;
@@ -293,6 +353,14 @@ bold {
      /* body {
         background-color: green;
     }  */
+    .socialImg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
     .leftSeta {
         top: 65px;
     }
@@ -312,22 +380,40 @@ bold {
         margin-left:5%;
         margin-right:5%;
         border-top-right-radius: 10px;
+
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-bottom: 30px;
     }
     .meusProjetos {
         margin-left:5%;
         margin-right:5%;
-        border-bottom-left-radius: 0px;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 30px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     .meuSistema {
         margin-left:5%;
         margin-right:5%;
-        border-top-right-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
 
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     .faleComigo { 
         margin-left:5%;
         margin-right:5%;
         border-bottom-left-radius: 10px;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        margin-top: 30px;
     }
     #svg8 {
         height: 270px;
@@ -352,6 +438,14 @@ bold {
     /*  body {
         background-color: yellow;
     }  */
+    .socialImg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
     .leftSeta {
         top: 30px;
     }
@@ -371,21 +465,46 @@ bold {
         margin-left:8%;
         margin-right:0%;
         border-top-right-radius: 0px;
+
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-bottom: 0px;
+
+        border-top-left-radius: 10px;
+
+        margin-top: 0px;
     }
     .meusProjetos {
         margin-left:8%;
         margin-right:0%;  
         border-bottom-left-radius: 10px;  
+
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-top: 0px;
+
+        
+        border-bottom-right-radius: 0px;
     }
     .meuSistema {
         margin-left:0%;
         margin-right:8%;
         border-top-right-radius: 10px;
+        
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+        border-top-left-radius: 0px;
     }
     .faleComigo { 
         margin-left:0%;
         margin-right:8%;
         border-bottom-left-radius: 0px;
+
+        border-top-left-radius: 00px;
+        border-top-right-radius: 00px;
+
+        margin-top: 0px;
     }
     #svg8 {
         height: 360px;
@@ -408,6 +527,14 @@ bold {
      /* body {
         background-color: pink;
     }  */
+    .socialImg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
     .leftSeta {
         top: 40px;
     }
@@ -427,16 +554,30 @@ bold {
         margin-left:14%;
         margin-right:0%;
         border-top-right-radius: 0px;
+
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-bottom: 0px;
     }
     .meusProjetos {
         margin-left:14%;
         margin-right:0%;
         border-bottom-left-radius: 10px;
+
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-top: 0px;
     }
     .meuSistema {
         margin-left:0%;
         margin-right:14%;
         border-top-right-radius: 10px;
+
+        border-top-left-radius: 0px;
+        margin-top: 0px;
+
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
     .faleComigo { 
         margin-left:0%;
@@ -464,6 +605,14 @@ bold {
      /* body {
         background-color: orange;
     }  */
+    .socialImg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
     .leftSeta {
         top: 80px;
     }
@@ -482,14 +631,28 @@ bold {
     .quemSouEu {
         margin-left:21%;
         border-top-right-radius: 0px;
+
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-bottom: 0px;
     }
     .meusProjetos {
         margin-left:21%;
         border-bottom-left-radius: 10px;
+
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-top: 0px;
     }
     .meuSistema {
         margin-right:21%;
         border-top-right-radius: 10px;
+
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+        border-top-left-radius: 0px;
+
     }
     .faleComigo { 
         margin-right:21%;
@@ -517,6 +680,14 @@ bold {
     /* body {
         background-color: teal;
     } */
+    .socialImg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
     .leftSeta {
         top: 80px;
     }
@@ -535,14 +706,27 @@ bold {
     .quemSouEu {
         margin-left:27%;
         border-top-right-radius: 0px;
+
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-bottom: 0px;
     }
     .meusProjetos {
         margin-left:27%;
         border-bottom-left-radius: 10px;
+
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-top: 0px;
     }
     .meuSistema {
         margin-right:27%;
         border-top-right-radius: 10px;
+
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+        border-top-left-radius: 0px;
     }
     .faleComigo { 
         margin-right:27%;
@@ -572,6 +756,14 @@ bold {
     /* body {
         background-color: black;
     } */
+    .socialImg {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
     .leftSeta {
         top: 80px;
     }
@@ -590,14 +782,27 @@ bold {
     .quemSouEu {
         margin-left:35%;
         border-top-right-radius: 0px;
+
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-bottom: 0px;
     }
     .meusProjetos {
         margin-left:35%;
         border-bottom-left-radius: 10px;
+
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-top: 0px;
     }
     .meuSistema {
         margin-right:35%;
         border-top-right-radius: 10px;
+
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+        border-top-left-radius: 0px;
     }
     .faleComigo { 
         margin-right:35%;
@@ -724,15 +929,11 @@ animation-delay: 4s;
     cursor: crosshair;
 }
 
-/* .machine:hover {
-    transform: scale(1.05);
-} */
 .socialImg {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    margin-right: 25px;
-    margin-left: 25px;
+    
     cursor: pointer;
 }
 
